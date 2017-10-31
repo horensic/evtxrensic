@@ -1,5 +1,4 @@
 # evtxrensic
 Evtx parser for studying
 
-## developer
-Seonho Lee, 
+Collaboration with 
