@@ -13,7 +13,7 @@
 </p>
 
 
-#### What are "EVTXRENSIC"?
+<h2>What are "EVTXRENSIC"?</h2>
 
 The EVTXRENSIC project was initiated on the basis of the issues addressed in [KDFS 2017](http://forensic.korea.ac.kr/2017/KDFS_2017_challenge.html).
 
@@ -23,8 +23,14 @@ The EVTXRENSIC project was initiated on the basis of the issues addressed in [KD
 
 &mdash; Introductions KDFS 2017 Challenge, *Korea Digital Forensic Research Center*.
 
+<br/>
 
-### Contents
+<h2>Planned Architecture Map</h2>
+
+<p align='center'><img src="https://github.com/Digitalisx/evtxrensic/blob/master/Img/layer.PNG"></p>
+
+<br/>
+<h2>Contents</h2>
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -32,8 +38,5 @@ The EVTXRENSIC project was initiated on the basis of the issues addressed in [KD
 * [Developer](#developer)
 * [License](#license)
 
-### Planned Architecture Map
-
-<p align='center'><img src="https://github.com/Digitalisx/evtxrensic/blob/master/Img/layer.PNG"></p>
 
 Collaboration with 
