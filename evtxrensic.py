@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import os
 import sys
 import time
+import sqlite3
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from evtxrensic_form import *
@@ -24,6 +26,16 @@ class ParseEvtx(QThread):
 
     def run(self):
         self.completed = 0
+        
+        if(os.path.exists("result.db") == True):  
+            print("Remove Before SQLite DB File")
+            os.remove("result.db")
+
+        conn = sqlite3.connect("result.db")
+        cur = conn.cursor()
+        conn.text_factory = set
+        cur.execute("CREATE TABLE IF NOT EXISTS result(Record_Number text, Log_Time text, Step text, Event_Maker text, Event_ID text, Area text)")
+
         with evtx.Evtx(self.fp) as eventLog:
             start_time = time.time()
             for o in eventLog.chunks():
@@ -32,10 +44,17 @@ class ParseEvtx(QThread):
                     rv = r.get_xml()
                     recordList = [unicode(rv.recordId), unicode(rv.time), unicode(rv.level),
                         unicode(rv.name), unicode(rv.eventId), unicode(rv.task), "N/A"]
+                    
+                    cur.execute("INSERT INTO result VALUES (?, ?, ?, ?, ?, ?)", (unicode(rv.recordId), unicode(rv.time), unicode(rv.level),
+                        unicode(rv.name), unicode(rv.eventId), unicode(rv.task)))
+
                     self.emit(SIGNAL("parse_record(QStringList)"), recordList)
                 self.emit(SIGNAL("parse_chunk()"))
             end_time = time.time()
-            print("processing time: ", end_time - start_time)
+            conn.commit()
+            conn.close()
+            print("Processing time: ", end_time - start_time)
+            print("\nMake to Success SQLite DB File")
 
 class Evtxrensic(QMainWindow):
 
