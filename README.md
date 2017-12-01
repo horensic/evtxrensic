@@ -25,10 +25,15 @@ The EVTXRENSIC project was initiated on the basis of the issues addressed in [KD
 
 
 ### Contents
+
 * [Installation](#installation)
 * [Usage](#usage)
 * [Updates](#updates)
 * [Developer](#developer)
 * [License](#license)
+
+### Planned Architecture Map
+
+<p align='center'><img src="https://github.com/Digitalisx/evtxrensic/blob/master/Img/layer.PNG"></p>
 
 Collaboration with 
