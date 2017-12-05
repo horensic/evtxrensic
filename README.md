@@ -38,5 +38,10 @@ The EVTXRENSIC project was initiated on the basis of the issues addressed in [KD
 * [Developer](#developer)
 * [License](#license)
 
+<br/>
+
+<h2>Screenshot</h2>
+
+<p align='center'><img src="https://github.com/Digitalisx/EVTXRENSIC/blob/master/Img/Visualization_Example.PNG"></p>
 
 Collaboration with 
