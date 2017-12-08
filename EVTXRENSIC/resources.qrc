@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>resource/dashboard.png</file>
+    <file>resource/exit.png</file>
+    <file>resource/list.png</file>
+    <file>resource/open.png</file>
+    <file>resource/timezone.png</file>
+  </qresource>
+</RCC>
