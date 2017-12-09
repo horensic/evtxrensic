@@ -1,1 +1,0 @@
-pyinstaller --onefile --windowed --uac-admin ".\evtxrensic.py"
